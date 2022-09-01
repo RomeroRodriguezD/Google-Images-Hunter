@@ -1,6 +1,6 @@
 # Google Images Hunter
 
-Foobar is a Python library for dealing with word pluralization.
+Google Images Hunter is a package made to scrap Google Search images engine.
 
 ## Installation
 
