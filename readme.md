@@ -16,7 +16,9 @@ pip install google-images-hunter
 from google_hunter_images import Searcher, ImageDownloader
 
 # Step 1, create a Searcher object.
+
 searcher = Searcher()
+
 # Step 2, set and trigger the scrap() function. Concept is a required parameter.
 # Max_images and loadmore have default values. download_url_lists defaults as False.
 
@@ -29,10 +31,9 @@ ImageDownloader(mylist, path='downloadtest/clowns/')
 
 ## Contributing
 
-This is just an scraper I built since I have not been able to find the exact kind of Google images scraper I was looking for. I made it mixing my own ideas and some features I cherrypicked from different scraping scripts I found during my research task. Thanks to those anonymous contributors.
+This is just an scraper I built since I have not been able to find the exact kind of Google images scraper I was looking for. I made it mixing my own ideas and some features I cherrypicked from different scraping scripts I found during my research task. Thanks to those anonymous helpers.
 
-Pull requests are welcome. For changes, please open an issue first to discuss what you would like to change. Notice that this is the first version, currently tested on Firefox, so although it should
-work regularly on Chrome and Edge, it still needs more tests.
+Notice that this is the first version, currently tested on Firefox, so although it should work regularly on Chrome and Edge, it still needs more tests.
 
 
 
