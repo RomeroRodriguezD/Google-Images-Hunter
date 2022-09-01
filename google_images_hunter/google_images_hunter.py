@@ -12,7 +12,7 @@ from time import sleep
 
 class Searcher:
 
-    def __init__(self, navigator = 'firefox', profile: str = None):
+    def __init__(self, navigator = 'firefox', profile: str = None, driver_path):
         global browser, profile_flag
         profile_flag = False
 
@@ -20,29 +20,31 @@ class Searcher:
             if profile is not None:
                 profile_up = webdriver.FirefoxProfile(profile)
                 profile_flag = True
-                browser = webdriver.Firefox(firefox_profile=profile_up)
+                browser = webdriver.Firefox(executable_path=driver_path, firefox_profile=profile_up)
             else:
-                browser = webdriver.Firefox()
+                browser = webdriver.Firefox(executable_path=driver_path)
 
         elif navigator == 'chrome':
             if profile is not None:
                 options = webdriver.ChromeOptions()
                 options.add_argument(profile)
                 profile_flag = True
-                browser = webdriver.Chrome(chrome_options=options)
+                browser = webdriver.Chrome(executable_path=driver_path, chrome_options=options)
             else:
-                browser = webdriver.Chrome()
+                browser = webdriver.Chrome(executable_path=driver_path)
 
         elif navigator == 'edge':
             if profile is not None:
                 options = webdriver.EdgeOptions()
                 options.add_argument(profile)
                 profile_flag = True
-                browser = webdriver.Edge(options=options)
+                browser = webdriver.Edge(executable_path=driver_path, options=options)
             else:
-                browser = webdriver.Edge()
+                browser = webdriver.Edge(executable_path=driver_path)
         else:
-            raise AttributeError('Navigator argument should be one of this list: firefox, chrome, edge')
+            raise AttributeError('Navigator argument should be one of this list: firefox, chrome, edge',
+                                'Also, check the driver path if needed.
+                                )
 
 
     def scroll_to_end(self):
