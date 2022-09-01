@@ -16,7 +16,7 @@ pip install google-images-hunter
 from google_hunter_images import Searcher, ImageDownloader
 
 # Step 1, create a Searcher object.
-    searcher = Searcher()
+searcher = Searcher()
 # Step 2, set and trigger the scrap() function. Concept is a required parameter.
 # Max_images and loadmore have default values. download_url_lists defaults as False.
 
