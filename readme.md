@@ -15,7 +15,7 @@ pip install google-images-hunter
 ```python
 from google_hunter_images import Searcher, ImageDownloader
 
-# Step 1, create a Searcher object.
+# Step 1, create a Searcher object.You can set driver_path and other kwargs. 
 
 searcher = Searcher()
 
