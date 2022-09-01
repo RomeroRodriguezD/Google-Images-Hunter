@@ -12,7 +12,7 @@ from time import sleep
 
 class Searcher:
 
-    def __init__(self, navigator = 'firefox', profile: str = None, driver_path):
+    def __init__(self, navigator = 'firefox', profile: str = None, driver_path='.'):
         global browser, profile_flag
         profile_flag = False
 
